@@ -47,6 +47,7 @@ typedef struct instruction_s
  * @buffer: buffer written from file
  * @stack_list: linked list
  * @fp: file pointer
+ * @mode: program mode
  * Description: Consist of the global variables in the program
  */
 struct Global
@@ -56,6 +57,7 @@ struct Global
 	char *buffer;
 	stack_t *stack_list;
 	FILE *fp;
+	int mode;
 } global;
 
 
@@ -80,5 +82,7 @@ void o_pchar(stack_t **head, unsigned int line_number);
 void o_pstr(stack_t **head, unsigned int line_number);
 void o_rotl(stack_t **head, unsigned int line_number);
 void o_rotr(stack_t **head, unsigned int line_number);
+void queue(stack_t **head, unsigned int line_number);
+void stack(stack_t **head, unsigned int line_number);
 
 #endif
