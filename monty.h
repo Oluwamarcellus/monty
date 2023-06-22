@@ -70,6 +70,10 @@ void o_pall(stack_t **head, unsigned int line_number);
 void o_pint(stack_t **head, unsigned int line_number);
 void o_pop(stack_t **head, unsigned int line_number);
 void o_swap(stack_t **head, unsigned int line_number);
-
-
+void o_add(stack_t **head, unsigned int line_number);
+void o_nop(stack_t **head, unsigned int line_number);
+void o_sub(stack_t **head, unsigned int line_number);
+void o_div(stack_t **head, unsigned int line_number);
+void o_mul(stack_t **head, unsigned int line_number);
+void o_mod(stack_t **head, unsigned int line_number);
 #endif
