@@ -75,3 +75,26 @@ void o_pstr(stack_t **head, unsigned int line_number)
 	}
 	printf("\n");
 }
+
+/**
+ *o_rotl - rotates the stack to the top
+ *The top element of the stack becomes the last one
+ *and the second top element of the stack becomes the first one
+ *@head: linked list
+ *@line_number: exec line number
+ *Return: void
+ */
+void o_rotl(stack_t **head, unsigned int line_number)
+{
+	int i;
+	stack_t *tmp;
+
+	tmp = *head;
+	for (i = 0; tmp; i++)
+		tmp = tmp->next;
+	if (i >= 2)
+	{
+		push_end(head, (*head)->n);
+		o_pop(head, line_number);
+	}
+}

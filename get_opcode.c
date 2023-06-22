@@ -24,6 +24,7 @@ void (*get_opcode(char *tokenized))(stack_t **stack, unsigned int line_number)
 		{"mod", o_mod},
 		{"pchar", o_pchar},
 		{"pstr", o_pstr},
+		{"rotl", o_rotl},
 		{NULL, NULL}
 	};
 	while (opcodes[i].opcode != NULL)
