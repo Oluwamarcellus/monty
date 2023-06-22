@@ -1,5 +1,4 @@
 #include "monty.h"
-#include <stdlib.h>
 
 /**
  *o_mod - computes the rest of the division of the second top
@@ -53,4 +52,26 @@ void o_pchar(stack_t **head, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	printf("%c\n", (*head)->n);
+}
+
+/**
+ *o_pstr - prints the string starting at the top of the stack
+ *@head: linked list
+ *@line_number: exec line number
+ *Return: void
+ */
+void o_pstr(stack_t **head, unsigned int line_number)
+{
+	stack_t *tmp;
+	(void)line_number;
+
+	tmp = *head;
+	while (tmp)
+	{
+		if (tmp->n <= 0 || tmp->n > 127)
+			break;
+		printf("%c", tmp->n);
+		tmp = tmp->next;
+	}
+	printf("\n");
 }
