@@ -31,3 +31,26 @@ void o_mod(stack_t **head, unsigned int line_number)
 	(*head)->next->n %= (*head)->n;
 	o_pop(head, line_number);
 }
+
+/**
+ *o_pchar - prints the char at the top of the stack, followed by a new line
+ *@head: linked list
+ *@line_number: exec line number
+ *Return: void
+ */
+void o_pchar(stack_t **head, unsigned int line_number)
+{
+	if (!*head)
+	{
+		dprintf(2, "L%d: can't pchar, stack empty\n", line_number);
+		ffree();
+		exit(EXIT_FAILURE);
+	}
+	if ((*head)->n < 0 || (*head)->n > 127)
+	{
+		dprintf(2, "L%d: can't pchar, value out of range\n", line_number);
+		ffree();
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", (*head)->n);
+}
