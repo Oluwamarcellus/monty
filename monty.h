@@ -67,9 +67,9 @@ void push_start(stack_t **head, int data);
 void push_end(stack_t **head, int data);
 void ffree(void);
 void o_pall(stack_t **head, unsigned int line_number);
-
-
-
+void o_pint(stack_t **head, unsigned int line_number);
+void o_pop(stack_t **head, unsigned int line_number);
+void o_swap(stack_t **head, unsigned int line_number);
 
 
 #endif

@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 			func = get_opcode(tokenized);
 			if (func == NULL)
 			{
-				fprintf(stderr, "L%d: unknown instruction <opcode>\n", global.line_number);
+				dprintf(2, "L%d: unknown instruction %s\n", global.line_number, tokenized);
 				ffree();
 				exit(EXIT_FAILURE);
 			}

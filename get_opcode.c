@@ -13,6 +13,9 @@ void (*get_opcode(char *tokenized))(stack_t **stack, unsigned int line_number)
 	instruction_t opcodes[] = {
 		{"push", o_push},
 		{"pall", o_pall},
+		{"pint", o_pint},
+		{"pop", o_pop},
+		{"swap", o_swap},
 		{NULL, NULL}
 	};
 	while (opcodes[i].opcode != NULL)
