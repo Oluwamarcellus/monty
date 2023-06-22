@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 	global.buffer = NULL;
 	global.stack_list = NULL;
 	global.line_number = 1;
+	global.mode = 1;
 	get_line = getline(&global.buffer, &buf_s, global.fp);
 
 	while (get_line != -1)

@@ -29,7 +29,10 @@ void o_push(stack_t **stack, unsigned int line_number)
 		i++;
 	}
 	num = atoi(global.arg);
-	push_start(stack, num);
+	if (global.mode == 1)
+		push_start(stack, num);
+	else if (global.mode == 2)
+		push_end(stack, num);
 }
 
 
