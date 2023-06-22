@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	while (get_line != -1)
 	{
 		tokenized = strtok(global.buffer, " \n\t");
-		if (tokenized && *tokenized != '#')
+		if (tokenized && tokenized[0] != '#')
 		{
 			func = get_opcode(tokenized);
 			if (func == NULL)
@@ -35,6 +35,9 @@ int main(int argc, char *argv[])
 			global.arg = strtok(NULL, " \n\t");
 			func(&global.stack_list, global.line_number);
 		}
+		free(global.buffer);
+		global.buffer = NULL;
+		buf_s = 0;
 		get_line = getline(&global.buffer, &buf_s, global.fp);
 		global.line_number++;
 	}
