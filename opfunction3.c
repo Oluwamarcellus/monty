@@ -98,3 +98,24 @@ void o_rotl(stack_t **head, unsigned int line_number)
 		o_pop(head, line_number);
 	}
 }
+
+/**
+ *o_rotr - rotates the stack to the bottom
+ *@head: linked list
+ *@line_number: exec line number
+ *Return: void
+ */
+void o_rotr(stack_t **head, unsigned int line_number)
+{
+	stack_t *tmp;
+	(void)line_number;
+
+	if (!*head || !(*head)->next)
+		return;
+	tmp = *head;
+	while (tmp->next->next)
+		tmp = tmp->next;
+	push_start(head, tmp->next->n);
+	free(tmp->next);
+	tmp->next = NULL;
+}

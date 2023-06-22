@@ -79,5 +79,6 @@ void o_mod(stack_t **head, unsigned int line_number);
 void o_pchar(stack_t **head, unsigned int line_number);
 void o_pstr(stack_t **head, unsigned int line_number);
 void o_rotl(stack_t **head, unsigned int line_number);
+void o_rotr(stack_t **head, unsigned int line_number);
 
 #endif
