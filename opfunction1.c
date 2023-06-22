@@ -20,7 +20,7 @@ void o_push(stack_t **stack, unsigned int line_number)
 	}
 	while (global.arg[i] != '\0')
 	{
-		if (global.arg[i] < '0' || global.arg[i] > '9')
+		if ((global.arg[i] < '0' || global.arg[i] > '9') && global.arg[i] != '-')
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			ffree();

@@ -1,9 +1,8 @@
-#push 10
-push 5
-push 2
-#rubbish
-#hey there
-      			 #hello
-mod
-#haha
+push 65
+pchar
+push -1
 pall
+push --2
+push -2-1
+pall
+pchar
